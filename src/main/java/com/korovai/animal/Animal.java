@@ -1,7 +1,6 @@
 package com.korovai.animal;
 // Создайте родительский класс Animal
 public class Animal {
-
         //Свойства: name, age, weight, color
         private String name;
         private int age;
@@ -44,7 +43,6 @@ public class Animal {
         }
         //метод eat(Вывод на экран: "Я ем"),
         public void eat() {
-
             System.out.println("Я иду");
         }
     public String getName() {
@@ -60,29 +58,19 @@ public class Animal {
     public String toString() {
         return "Animal{" +
                 "Привет! меня зовут='" + name + '\'' +
-                ", мне=" + age +
+                ", мне=" + age + createAge(age)+
                 ", я вешу=" + weight +
                 ", мой цвет=" + color +
                 '}';
     }
-         public String age (int age) {
-             switch (age) {
-                 case 1:
+         public String createAge (int age) {// переделать на if else
                      if (age == 1) {
                          System.out.println("год");
-                     }
-                     break;
-                 case 2:
-                     if (age > 1 && age < 5) {
+                     } else if (age > 1 && age < 5) {
                          System.out.println("года");
-                     }
-                     break;
-                 case 3:
-                     if (age > 4 && age < 21) {
+                     } else if (age > 4 && age < 21) {
                          System.out.println("лет");
-                         break;
                      }
-             }
              return null;
          }
-}
+         }
