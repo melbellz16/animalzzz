@@ -61,7 +61,7 @@ public class Main {
            System.out.println("Выберите имя");
            newAnimal.setName(scanner.next());
            System.out.println("Выберите цвет");
-           newAnimal.setColor(scanner.nextInt());
+           newAnimal.setColor(scanner.next());
            System.out.println("Выберите возраст");
            newAnimal.setAge(scanner.nextInt());
            System.out.println("Выберите вес");

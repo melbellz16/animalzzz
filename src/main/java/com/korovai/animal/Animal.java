@@ -5,7 +5,8 @@ public class Animal {
         private String name;
         private int age;
         private int weight;
-        private int color;
+        private String color;
+
         //Методы:
         //Getter and Setter
         public void setName(String name) {
@@ -23,10 +24,10 @@ public class Animal {
         public void setWeight(int weight) {
             this.weight = weight;
         }
-        public int getColor() {
+        public String getColor() {
             return color;
         }
-        public void setColor(int color) {
+        public void setColor(String color) {
             this.color = color;
         }
         // метод Say(Вывод на экран: "Я говорю"),
@@ -57,20 +58,26 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "Привет! меня зовут='" + name + '\'' +
+                "Привет! меня зовут='" + "" + "" + name + '\'' +
                 ", мне=" + age + createAge(age)+
                 ", я вешу=" + weight +
                 ", мой цвет=" + color +
                 '}';
     }
-         public String createAge (int age) {// переделать на if else
-                     if (age == 1) {
-                         System.out.println("год");
-                     } else if (age > 1 && age < 5) {
-                         System.out.println("года");
-                     } else if (age > 4 && age < 21) {
-                         System.out.println("лет");
-                     }
-             return null;
+         public String createAge (int age) {
+
+             if (age == 0) {
+                 return "лет";
+             } else if (age == 1) {
+                     return "год";
+                 }
+             else if  (age >= 5 && age <= 20) {
+                 return "лет";
+             }
+             else if (age >= 2 && age <= 4) {
+                 return "года";
+             } else {
+                 return "Чуток староват мохнатый";
+             }
          }
-         }
+}
