@@ -6,7 +6,6 @@ public class Animal {
         private int age;
         private int weight;
         private String color;
-
         //Методы:
         //Getter and Setter
         public void setName(String name) {
