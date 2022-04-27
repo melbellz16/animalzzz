@@ -58,14 +58,13 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "Привет! меня зовут='" + "" + "" + name + '\'' +
+                "Привет! меня зовут='" + name + '\'' +
                 ", мне=" + age + createAge(age)+
                 ", я вешу=" + weight +
                 ", мой цвет=" + color +
                 '}';
     }
          public String createAge (int age) {
-
              if (age == 0) {
                  return "лет";
              } else if (age == 1) {
